@@ -1,0 +1,53 @@
+---
+layout: default
+title: "プロフィール"
+description: "理学療法士・第一種衛生管理者として、アニメ業界で働く人の健康と持続可能な制作環境づくりを支援する神谷健太のプロフィールです。"
+permalink: /profile/
+---
+<section class="blog-hero">
+  <div class="wide-container">
+    <p class="eyebrow">ABOUT THE AUTHOR</p>
+    <h1>PROFILE</h1>
+    <p>アニメ業界で働く人の健康と、<br>持続可能な制作環境づくりを支援しています。</p>
+  </div>
+</section>
+
+<section class="profile-main">
+  <div class="narrow-container">
+    <div class="profile-card">
+      <p class="profile-label">KENTA KAMIYA</p>
+      <h2>神谷 健太</h2>
+      <p class="profile-credentials">理学療法士・第一種衛生管理者</p>
+      <p class="profile-intro">身体のケアと労働衛生の視点から、アニメ業界で働く人の健康づくりと、無理なく働き続けられる制作環境づくりを支援しています。</p>
+    </div>
+
+    <div class="profile-content">
+      <h2>活動領域</h2>
+      <ul>
+        <li>身体の不調・作業環境</li>
+        <li>睡眠・メンタルヘルス</li>
+        <li>健康経営・働き方</li>
+        <li>健康に関する講演・執筆・監修</li>
+      </ul>
+
+      <h2>このサイトについて</h2>
+      <p>アニメ制作現場の健康や働き方について、研究や公的資料をもとに情報を発信しています。現場で働く人と制作を支える組織の双方にとって、実践につながる情報を届けることを目指しています。</p>
+    </div>
+
+    <div class="post-actions">
+      <a href="{{ '/blog/' | relative_url }}" class="text-link">コラムを読む</a>
+      <a href="{{ '/' | relative_url }}#contact" class="primary-button">講演・執筆について相談する</a>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "神谷 健太",
+  "jobTitle": "理学療法士・第一種衛生管理者",
+  "url": {{ page.url | absolute_url | jsonify }},
+  "sameAs": ["https://note.com/health_00"]
+}
+</script>
