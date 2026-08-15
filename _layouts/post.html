@@ -20,9 +20,9 @@ layout: default
   </header>
 
   <div class="narrow-container post-main">
-    {% if page.image %}
+    {% if page.image and page.show_image_in_post != false %}
     <figure class="post-hero-image">
-      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}"{% if page.image_width %} width="{{ page.image_width }}"{% endif %}{% if page.image_height %} height="{{ page.image_height }}"{% endif %} fetchpriority="high" decoding="async">
     </figure>
     {% endif %}
 
@@ -30,9 +30,16 @@ layout: default
       {{ content }}
     </div>
 
+    {% unless page.health_disclaimer == false %}
+    <aside class="health-note" aria-label="健康情報に関するご案内">
+      <p class="health-note-title">健康情報に関するご案内</p>
+      <p>本記事は一般的な情報提供を目的としており、個別の診断や治療を代替するものではありません。症状が続く場合や生活に支障がある場合は、医療機関や専門家へご相談ください。</p>
+    </aside>
+    {% endunless %}
+
     <aside class="author-box" aria-label="著者情報">
       <p class="author-label">AUTHOR</p>
-      <p class="author-name">{{ page.author | default: site.author.name }}</p>
+      <p class="author-name"><a href="{{ '/' | relative_url }}#about">{{ page.author | default: site.author.name }}</a></p>
       <p>{{ site.author.credentials }}。アニメ業界で働く人の健康と、持続可能な制作環境づくりを支援しています。</p>
     </aside>
 
@@ -58,7 +65,8 @@ layout: default
   "author": {
     "@type": "Person",
     "name": {{ page.author | default: site.author.name | jsonify }},
-    "jobTitle": {{ site.author.credentials | jsonify }}
+    "jobTitle": {{ site.author.credentials | jsonify }},
+    "url": {{ '/#about' | absolute_url | jsonify }}
   },
   "publisher": {
     "@type": "Person",
