@@ -53,7 +53,8 @@
     "publisher": {
       "@type": "Person",
       "name": {{ site.author.name | jsonify }},
-      "jobTitle": {{ site.author.credentials | jsonify }}
+      "jobTitle": {{ site.author.credentials | jsonify }},
+      "url": {{ '/profile/' | absolute_url | jsonify }}
     }
   }
   </script>
@@ -66,7 +67,7 @@
       <nav class="site-nav" aria-label="メインナビゲーション">
         <a href="{{ '/' | relative_url }}#about">ABOUT</a>
         <a href="{{ '/' | relative_url }}#service">SERVICE</a>
-        <a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>BLOG</a>
+        <a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>COLUMN</a>
         <a href="{{ '/' | relative_url }}#contact" class="site-nav-button">CONTACT</a>
       </nav>
       <details class="mobile-menu">
@@ -74,7 +75,7 @@
         <nav class="mobile-nav" aria-label="モバイルナビゲーション">
           <a href="{{ '/' | relative_url }}#about">ABOUT</a>
           <a href="{{ '/' | relative_url }}#service">SERVICE</a>
-          <a href="{{ '/blog/' | relative_url }}">BLOG</a>
+          <a href="{{ '/blog/' | relative_url }}">COLUMN</a>
           <a href="{{ '/' | relative_url }}#contact">CONTACT</a>
         </nav>
       </details>
@@ -90,7 +91,7 @@
       <p class="site-footer-brand">k-therapist</p>
       <nav class="site-footer-nav" aria-label="フッターナビゲーション">
         <a href="{{ '/' | relative_url }}">HOME</a>
-        <a href="{{ '/blog/' | relative_url }}">BLOG</a>
+        <a href="{{ '/blog/' | relative_url }}">COLUMN</a>
         <a href="https://note.com/health_00" target="_blank" rel="noopener">NOTE ↗</a>
         <a href="{{ '/' | relative_url }}#contact">CONTACT</a>
         <a href="{{ '/privacy-policy.html' | relative_url }}">PRIVACY POLICY</a>
