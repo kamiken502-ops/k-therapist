@@ -72,7 +72,7 @@ img{display:block;height:auto;max-width:100%}
 .breadcrumb a{font-weight:700}
 .breadcrumb span{color:#A0A6AF}
 .post-header .post-meta{margin-bottom:15px}
-.post-header h1{color:var(--navy);font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.7rem);font-weight:600;letter-spacing:.055em;line-height:1.55}
+.post-header h1{color:var(--navy);font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.7rem);font-weight:600;letter-spacing:.055em;line-height:1.55;text-wrap:balance}
 .post-description{color:var(--muted);font-size:.95rem;margin-top:20px}
 .updated{color:#8A9099;font-size:.75rem;margin-top:14px}
 .post-main{padding-bottom:100px;padding-top:54px}
@@ -89,9 +89,13 @@ img{display:block;height:auto;max-width:100%}
 .post-content table{border-collapse:collapse;display:block;overflow-x:auto;width:100%}
 .post-content th,.post-content td{border:1px solid var(--line);padding:10px 12px;text-align:left}
 .post-content th{background:var(--blue-soft);color:var(--navy)}
+.health-note{background:var(--blue-soft);border-left:3px solid var(--blue);color:var(--muted);font-size:.82rem;line-height:1.85;margin-top:56px;padding:20px 24px}
+.health-note-title{color:var(--navy);font-size:.85rem;font-weight:700;margin-bottom:5px}
 .author-box{background:#fff;border:1px solid var(--line);border-left:3px solid var(--blue);margin-top:64px;padding:26px 28px}
 .author-label{color:var(--blue);font-size:.7rem;font-weight:700;letter-spacing:.2em}
 .author-name{color:var(--navy);font-family:var(--font-display);font-size:1.15rem;font-weight:700;letter-spacing:.1em;margin-top:4px}
+.author-name a{color:inherit}
+.author-name a:hover{text-decoration:underline;text-underline-offset:4px}
 .author-box p:last-child{color:var(--muted);font-size:.84rem;margin-top:7px}
 .post-actions{align-items:center;display:flex;gap:20px;justify-content:space-between;margin-top:44px}
 .text-link{font-size:.84rem;font-weight:700;text-decoration:underline;text-underline-offset:3px}
@@ -121,6 +125,10 @@ img{display:block;height:auto;max-width:100%}
   .post-card-body{padding:24px}
   .post-header{padding:44px 0 40px}
   .post-main{padding-bottom:76px;padding-top:38px}
+  .post-content{line-height:1.9}
+  .post-content > * + *{margin-top:18px}
+  .post-content h2{margin-top:46px}
+  .health-note{margin-top:46px;padding:18px 20px}
   .post-actions{align-items:stretch;flex-direction:column-reverse;text-align:center}
   .primary-button{width:100%}
 }
