@@ -5,6 +5,9 @@ date: 2026-08-03 11:22:00 +0900
 last_modified_at: 2026-08-03 11:22:00 +0900
 category: "メンタルヘルス"
 image: "/images/blog/stress-reaction-note.webp"
+image_width: 1280
+image_height: 670
+show_image_in_post: false
 image_alt: "締切後の無気力をストレス反応から考える―NIOSH職業性ストレスモデルで整理する"
 author: "神谷 健太"
 original_url: "https://note.com/health_00/n/n9e1fe1fbfc6f"
