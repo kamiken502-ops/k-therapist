@@ -1,0 +1,79 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <div class="narrow-container">
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <a href="{{ '/' | relative_url }}">HOME</a>
+        <span aria-hidden="true">/</span>
+        <a href="{{ '/blog/' | relative_url }}">BLOG</a>
+      </nav>
+      <div class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time>
+        {% if page.category %}<span class="category">{{ page.category }}</span>{% endif %}
+      </div>
+      <h1>{{ page.title }}</h1>
+      <p class="post-description">{{ page.description }}</p>
+      {% if page.last_modified_at %}<p class="updated">最終更新：<time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: '%Y.%m.%d' }}</time></p>{% endif %}
+    </div>
+  </header>
+
+  <div class="narrow-container post-main">
+    {% if page.image %}
+    <figure class="post-hero-image">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}">
+    </figure>
+    {% endif %}
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+
+    <aside class="author-box" aria-label="著者情報">
+      <p class="author-label">AUTHOR</p>
+      <p class="author-name">{{ page.author | default: site.author.name }}</p>
+      <p>{{ site.author.credentials }}。アニメ業界で働く人の健康と、持続可能な制作環境づくりを支援しています。</p>
+    </aside>
+
+    <div class="post-actions">
+      <a href="{{ '/blog/' | relative_url }}" class="text-link">記事一覧へ戻る</a>
+      <a href="{{ '/' | relative_url }}#contact" class="primary-button">講演・執筆について相談する</a>
+    </div>
+  </div>
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},{% if page.last_modified_at %}
+  "dateModified": {{ page.last_modified_at | date_to_xmlschema | jsonify }},{% endif %}
+  "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},{% if page.image %}
+  "image": {{ page.image | absolute_url | jsonify }},{% endif %}
+  "articleSection": {{ page.category | default: '健康・働き方' | jsonify }},
+  "inLanguage": "ja-JP",
+  "author": {
+    "@type": "Person",
+    "name": {{ page.author | default: site.author.name | jsonify }},
+    "jobTitle": {{ site.author.credentials | jsonify }}
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }}
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "HOME", "item": {{ '/' | absolute_url | jsonify }}},
+    {"@type": "ListItem", "position": 2, "name": "BLOG", "item": {{ '/blog/' | absolute_url | jsonify }}},
+    {"@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": {{ page.url | absolute_url | jsonify }}}
+  ]
+}
+</script>
