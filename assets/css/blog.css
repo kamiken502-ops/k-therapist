@@ -73,6 +73,7 @@ img{display:block;height:auto;max-width:100%}
 .breadcrumb span{color:#A0A6AF}
 .post-header .post-meta{margin-bottom:15px}
 .post-header h1{color:var(--navy);font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.7rem);font-weight:600;letter-spacing:.055em;line-height:1.55;text-wrap:balance}
+.post-header h1 .nowrap{white-space:nowrap}
 .post-description{color:var(--muted);font-size:.95rem;margin-top:20px}
 .updated{color:#8A9099;font-size:.75rem;margin-top:14px}
 .post-main{padding-bottom:100px;padding-top:54px}
