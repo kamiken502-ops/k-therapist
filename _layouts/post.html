@@ -13,7 +13,7 @@ layout: default
         <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time>
         {% if page.category %}<span class="category">{{ page.category }}</span>{% endif %}
       </div>
-      <h1>{{ page.title }}</h1>
+      <h1>{% if page.display_title %}{{ page.display_title }}{% else %}{{ page.title }}{% endif %}</h1>
       <p class="post-description">{{ page.description }}</p>
       {% if page.last_modified_at %}<p class="updated">最終更新：<time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: '%Y.%m.%d' }}</time></p>{% endif %}
     </div>
