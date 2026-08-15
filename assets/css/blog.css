@@ -67,6 +67,19 @@ img{display:block;height:auto;max-width:100%}
 .primary-button{background:var(--navy);border-radius:3px;color:#fff;display:inline-block;font-size:.85rem;font-weight:700;letter-spacing:.1em;padding:11px 24px;transition:background .15s,box-shadow .15s,transform .15s}
 .primary-button:hover{background:var(--blue);box-shadow:0 8px 20px rgba(26,54,93,.3);color:#fff;transform:translateY(-1px)}
 
+.profile-main{padding-bottom:108px;padding-top:72px}
+.profile-card{background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);padding:38px 40px}
+.profile-label{color:var(--blue);font-size:.72rem;font-weight:700;letter-spacing:.22em}
+.profile-card h2{color:var(--navy);font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.35rem);letter-spacing:.1em;margin-top:8px}
+.profile-credentials{color:var(--blue);font-size:.92rem;font-weight:700;margin-top:8px}
+.profile-intro{color:var(--muted);margin-top:22px}
+.profile-content{margin-top:56px}
+.profile-content h2{border-bottom:1px solid var(--line);color:var(--navy);font-family:var(--font-display);font-size:1.4rem;letter-spacing:.08em;padding-bottom:12px}
+.profile-content h2:not(:first-child){margin-top:48px}
+.profile-content p,.profile-content ul{margin-top:20px}
+.profile-content ul{padding-left:1.5em}
+.profile-content li+li{margin-top:7px}
+
 .post-header{background:#fff;border-bottom:1px solid var(--line);padding:60px 0 54px}
 .breadcrumb{align-items:center;display:flex;font-size:.72rem;gap:10px;letter-spacing:.12em;margin-bottom:30px}
 .breadcrumb a{font-weight:700}
@@ -126,6 +139,8 @@ img{display:block;height:auto;max-width:100%}
   .post-card-body{padding:24px}
   .post-header{padding:44px 0 40px}
   .post-main{padding-bottom:76px;padding-top:38px}
+  .profile-main{padding-bottom:78px;padding-top:46px}
+  .profile-card{padding:28px 24px}
   .post-content{line-height:1.9}
   .post-content > * + *{margin-top:18px}
   .post-content h2{margin-top:46px}
