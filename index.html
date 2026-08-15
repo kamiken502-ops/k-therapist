@@ -1,3 +1,8 @@
+---
+title: "k-therapist｜描き続けるために、身体を整える。— アニメ業界の健康支援"
+description: "作品を生み出す情熱を、身体のケアで支える。理学療法士・第一種衛生管理者がアニメ業界の健康課題に取り組みます。講演・セミナー、健康コラム監修・寄稿、作業姿勢分析、健康経営伴走支援。"
+permalink: /
+---
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -10,7 +15,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-L1PETS3GDG');
 </script>
 
@@ -19,10 +23,37 @@
 <meta property="og:title" content="k-therapist｜アニメ業界の健康支援">
 <meta property="og:description" content="描き続けるために、身体を整える。アニメ業界で働く人の健康を支えます。">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="k-therapist">
+<meta property="og:url" content="{{ '/' | absolute_url }}">
 <meta name="twitter:card" content="summary">
+<link rel="canonical" href="{{ '/' | absolute_url }}">
+<link rel="alternate" type="application/atom+xml" title="k-therapist" href="{{ '/feed.xml' | absolute_url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "k-therapist",
+  "url": "{{ '/' | absolute_url }}",
+  "description": "アニメ業界で働く人の健康を、講演・執筆・作業姿勢分析・健康経営支援を通じて支えます。",
+  "areaServed": "JP",
+  "founder": {
+    "@type": "Person",
+    "name": "神谷 健太",
+    "jobTitle": "理学療法士・第一種衛生管理者"
+  },
+  "knowsAbout": [
+    "アニメ業界の健康支援",
+    "作業姿勢",
+    "睡眠",
+    "メンタルヘルス",
+    "健康経営"
+  ]
+}
+</script>
 <style>
 /* =========================================================
    k-therapist — 世界観定義書 v2.0 準拠
@@ -236,12 +267,12 @@ footer{background:var(--navy-deep);border-top:1px solid var(--line-dark);color:#
 
 <header class="header">
   <div class="header-inner">
-    <a class="brand" href="#top">k-<span>therapist</span></a>
+    <a class="brand" href="{{ '/' | relative_url }}#top">k-<span>therapist</span></a>
     <nav class="nav" aria-label="メインナビゲーション">
       <a href="#about">ABOUT</a>
       <a href="#service">SERVICE</a>
       <a href="#company">INFORMATION</a>
-      <a href="https://note.com/health_00" target="_blank" rel="noopener">NOTE</a>
+      <a href="{{ '/blog/' | relative_url }}">BLOG</a>
       <a href="#contact" class="btn btn-nav">CONTACT</a>
     </nav>
     <details class="mobile-menu">
@@ -250,7 +281,7 @@ footer{background:var(--navy-deep);border-top:1px solid var(--line-dark);color:#
         <a href="#about">ABOUT</a>
         <a href="#service">SERVICE</a>
         <a href="#company">INFORMATION</a>
-        <a href="https://note.com/health_00" target="_blank" rel="noopener">NOTE</a>
+        <a href="{{ '/blog/' | relative_url }}">BLOG</a>
         <a href="#contact" class="btn">CONTACT</a>
       </nav>
     </details>
@@ -301,7 +332,7 @@ footer{background:var(--navy-deep);border-top:1px solid var(--line-dark);color:#
 
       <div class="svc-item">
         <div class="img-slot" data-label="画像 1（講演・セミナー）">
-          <img src="images/service-1.png" alt="講演会場で話す講師と参加者">
+          <img src="{{ '/images/service-1.png' | relative_url }}" alt="講演会場で話す講師と参加者">
         </div>
         <div>
           <p class="svc-num">01</p>
@@ -313,7 +344,7 @@ footer{background:var(--navy-deep);border-top:1px solid var(--line-dark);color:#
 
       <div class="svc-item">
         <div class="img-slot" data-label="画像 2（健康コラム監修・寄稿）">
-          <img src="images/service-2.png" alt="ノートパソコンとノートが置かれた作業机">
+          <img src="{{ '/images/service-2.png' | relative_url }}" alt="ノートパソコンとノートが置かれた作業机">
         </div>
         <div>
           <p class="svc-num">02</p>
@@ -324,7 +355,7 @@ footer{background:var(--navy-deep);border-top:1px solid var(--line-dark);color:#
 
       <div class="svc-item">
         <div class="img-slot" data-label="画像 3（作業姿勢分析・セルフケア設計）">
-          <img src="images/service-3.png" alt="モニターとエルゴノミクスチェアを備えた作業環境">
+          <img src="{{ '/images/service-3.png' | relative_url }}" alt="モニターとエルゴノミクスチェアを備えた作業環境">
         </div>
         <div>
           <p class="svc-num">03</p>
@@ -335,7 +366,7 @@ footer{background:var(--navy-deep);border-top:1px solid var(--line-dark);color:#
 
       <div class="svc-item">
         <div class="img-slot" data-label="画像 4（健康経営伴走支援）">
-          <img src="images/service-4.png" alt="資料を囲んで話し合うチーム">
+          <img src="{{ '/images/service-4.png' | relative_url }}" alt="資料を囲んで話し合うチーム">
         </div>
         <div>
           <p class="svc-num">04</p>
@@ -366,7 +397,7 @@ footer{background:var(--navy-deep);border-top:1px solid var(--line-dark);color:#
     </div>
     <div class="profile-grid">
       <div class="img-slot" data-label="プロフィール写真">
-        <img src="images/profile.jpg" alt="神谷 健太">
+        <img src="{{ '/images/profile.jpg' | relative_url }}" alt="神谷 健太">
       </div>
       <div class="profile-body">
         <h3>作品の裏側にある身体を守る</h3>
@@ -376,7 +407,7 @@ footer{background:var(--navy-deep);border-top:1px solid var(--line-dark);color:#
         <p>そんな想いから、クリエイター支援の活動を行っています。</p>
         <p class="profile-sign">代表<b>神谷 健太</b><small>理学療法士・第一種衛生管理者</small></p>
         <aside class="book-link" aria-labelledby="book-title">
-          <img class="book-cover" src="images/book-cover.jpg" alt="書籍『クリエイターの消耗が日本アニメの成長を止める 人手不足を止める「健康経営」入門』表紙">
+          <img class="book-cover" src="{{ '/images/book-cover.jpg' | relative_url }}" alt="書籍『クリエイターの消耗が日本アニメの成長を止める 人手不足を止める「健康経営」入門』表紙">
           <div>
             <p class="book-label">BOOK</p>
             <h4 id="book-title">クリエイターの消耗が<br>日本アニメの成長を止める<br>人手不足を止める「健康経営」入門</h4>
@@ -444,11 +475,11 @@ footer{background:var(--navy-deep);border-top:1px solid var(--line-dark);color:#
         <textarea id="message" name="message" placeholder="ご相談内容などをご記入ください。" required data-fs-field></textarea>
       </div>
 
-      <p class="privacy-link"><a href="privacy-policy.html">プライバシーポリシーを確認する</a></p>
+      <p class="privacy-link"><a href="{{ '/privacy-policy.html' | relative_url }}">プライバシーポリシーを確認する</a></p>
 
       <div class="agree">
         <input type="checkbox" id="privacy_agreement" name="privacy_agreement" value="agreed" required>
-        <label for="privacy_agreement"><a href="privacy-policy.html">プライバシーポリシー</a>に同意する</label>
+        <label for="privacy_agreement"><a href="{{ '/privacy-policy.html' | relative_url }}">プライバシーポリシー</a>に同意する</label>
       </div>
 
       <button type="submit" class="btn" data-fs-submit-btn>送信する</button>
@@ -457,16 +488,16 @@ footer{background:var(--navy-deep);border-top:1px solid var(--line-dark);color:#
   </div>
 </section>
 
-<!-- ================= NOTE ================= -->
+<!-- ================= BLOG ================= -->
 <div class="note-sec">
-  <div class="img-slot note-media" data-label="NOTE セクション背景画像">
-    <img src="images/note-bg.png" alt="">
+  <div class="img-slot note-media" data-label="BLOG セクション背景画像">
+    <img src="{{ '/images/note-bg.png' | relative_url }}" alt="">
   </div>
   <div class="note-veil" aria-hidden="true"></div>
   <div class="note-inner">
-    <h2><a href="https://note.com/health_00" target="_blank" rel="noopener">NOTE</a></h2>
-    <p>アニメ業界の身体の不調や働き方について、<br>noteで情報を発信しています。</p>
-    <a href="https://note.com/health_00" target="_blank" rel="noopener" class="btn btn-light">noteを読む</a>
+    <h2><a href="{{ '/blog/' | relative_url }}">COLUMN / BLOG</a></h2>
+    <p>アニメ制作現場の健康・働き方について、<br>研究や公的資料をもとに解説しています。</p>
+    <a href="{{ '/blog/' | relative_url }}" class="btn btn-light">ブログを読む</a>
   </div>
 </div>
 
@@ -479,9 +510,10 @@ footer{background:var(--navy-deep);border-top:1px solid var(--line-dark);color:#
       <a href="#about">ABOUT</a>
       <a href="#service">SERVICE</a>
       <a href="#company">INFORMATION</a>
-      <a href="https://note.com/health_00" target="_blank" rel="noopener">NOTE</a>
+      <a href="{{ '/blog/' | relative_url }}">BLOG</a>
+      <a href="https://note.com/health_00" target="_blank" rel="noopener">NOTE ↗</a>
       <a href="#contact">CONTACT</a>
-      <a href="privacy-policy.html">PRIVACY POLICY</a>
+      <a href="{{ '/privacy-policy.html' | relative_url }}">PRIVACY POLICY</a>
     </nav>
     <p class="copyright">© 2026 k-therapist</p>
   </div>
@@ -501,7 +533,7 @@ footer{background:var(--navy-deep);border-top:1px solid var(--line-dark);color:#
       button.textContent = '送信中…';
     },
     onSuccess: () => {
-      window.location.assign('thanks.html');
+      window.location.assign('{{ '/thanks.html' | relative_url }}');
     },
     onError: ({ form }) => {
       const button = form.querySelector('[data-fs-submit-btn]');

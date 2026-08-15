@@ -1,0 +1,73 @@
+---
+layout: default
+title: "BLOG"
+description: "アニメ制作現場の身体の不調、睡眠、メンタルヘルス、健康経営・働き方について、研究や公的資料をもとに解説します。"
+permalink: /blog/
+---
+<section class="blog-hero">
+  <div class="wide-container">
+    <p class="eyebrow">HEALTH &amp; WORK</p>
+    <h1>BLOG</h1>
+    <p>アニメ制作現場の健康・働き方について、<br>研究や公的資料をもとに解説しています。</p>
+  </div>
+</section>
+
+<section class="blog-list-section">
+  <div class="wide-container">
+    <div class="section-heading">
+      <h2>最新の記事</h2>
+      <span>ARTICLES</span>
+    </div>
+
+    <div class="post-grid">
+      {% for post in site.posts %}
+      <article class="post-card">
+        <a href="{{ post.url | relative_url }}" class="post-card-link" aria-label="{{ post.title | escape }}を読む">
+          {% if post.image %}
+          <div class="post-card-image">
+            <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title | escape }}">
+          </div>
+          {% endif %}
+          <div class="post-card-body">
+            <div class="post-card-meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+              {% if post.category %}<span class="category">{{ post.category }}</span>{% endif %}
+            </div>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.description }}</p>
+            <span class="read-more">記事を読む <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </article>
+      {% else %}
+      <p class="empty-state">記事を準備しています。</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="blog-cta">
+  <div class="narrow-container">
+    <h2>講演・執筆のご相談</h2>
+    <p>アニメ業界の健康づくり、社内研修、健康コラムの監修・寄稿についてご相談いただけます。</p>
+    <a href="{{ '/' | relative_url }}#contact" class="primary-button">お問い合わせ</a>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": {{ page.title | append: '｜' | append: site.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "inLanguage": "ja-JP",
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": {{ site.posts | size }},
+    "itemListElement": [
+      {% for post in site.posts %}{"@type":"ListItem","position":{{ forloop.index }},"url":{{ post.url | absolute_url | jsonify }},"name":{{ post.title | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}
+    ]
+  }
+}
+</script>

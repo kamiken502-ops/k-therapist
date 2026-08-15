@@ -1,0 +1,38 @@
+title: "k-therapist"
+tagline: "描き続けるために、身体を整える。"
+description: "理学療法士・第一種衛生管理者が、アニメ業界の身体の不調、睡眠、メンタルヘルス、健康経営について解説します。"
+url: "https://anime.k-therapist.com"
+baseurl: ""
+lang: "ja"
+timezone: "Asia/Tokyo"
+
+author:
+  name: "神谷 健太"
+  credentials: "理学療法士・第一種衛生管理者"
+
+permalink: /blog/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: "神谷 健太"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
